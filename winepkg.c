@@ -75,7 +75,7 @@ int sync()
 }    
 int list()
 {
-    if (system("cat ~/.winepkg/pkglist") != 0)
+    if (system("cat ~/.winepkg/pkglist | awk '{ print $1 }'") != 0)
     {
         printf ("File not found. Please run winepkg -S first.\n");
         return 1;
