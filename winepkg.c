@@ -108,7 +108,7 @@ int install(char wants[])
       i++;
       dlin = strtok(NULL, " "); 
     }
-    printf ("%s\n", dl[0]);
+    //printf ("%s\n", dl[0]);
     char dirname[512];
     strcpy(dirname,home);
     strcat(dirname,"/.winepkg/");
@@ -120,20 +120,21 @@ int install(char wants[])
     mkdir(idirname, S_IRWXU);
     char wgeti[512];
     strcpy(wgeti,"");
-    strcat(wgeti, "wget -N -P ");
+    strcat(wgeti, "wget -q --show-progress -N -P ");
     strcat(wgeti,idirname);
     strcat(wgeti," ");
     strcat(wgeti,dl[1]);
-    printf ("%s\n", wgeti);
+    //printf ("%s\n", wgeti);
     system(wgeti);
     char execi[512];
-    strcpy(wgeti,"");
+    strcpy(execi,"");
     strcat(execi, "chmod 775 ");
     strcat(execi, idirname);
     strcat(execi, "* && ");
     strcat(execi, "exec ");
     strcat(execi, idirname);
     strcat(execi, "*");
+    //printf("%s\n", execi);
     system(execi);
     // Done with opt install script. Starting exe download
     char edirname[512];
@@ -142,21 +143,29 @@ int install(char wants[])
     mkdir(edirname, S_IRWXU);
     char wgete[512];
     strcpy(wgete,"");
-    strcat(wgete, "wget -N -P ");
+    strcat(wgete, "wget -q --show-progress -N -P ");
     strcat(wgete,edirname);
     strcat(wgete," ");
     strcat(wgete,dl[2]);
-    printf ("%s\n", wgete);
+    //printf ("%s\n", wgete);
     system(wgete);
     // Downloading Runner Script
     char wgetr[512];
     strcpy(wgetr,"");
-    strcat(wgetr, "wget -N -P ");
+    strcat(wgetr, "wget -q --show-progress -N -P ");
     strcat(wgetr,dirname);
     strcat(wgetr," ");
     strcat(wgetr,dl[3]);
-    printf ("%s\n", wgetr);
+    //printf ("%s\n", wgetr);
     system(wgetr);
+    char chmod[512];
+    strcpy(chmod,"");
+    strcat(chmod, "chmod 775 ");
+    strcat(chmod, dirname);
+    strcat(chmod, "/");
+    strcat(chmod, dl[0]);
+    //printf("%s\n", chmod);
+    system(chmod);
     char ans[16];
     printf("Would you like to install this program as a command (/usr/bin) [Y/n]");
     scanf("%c", ans);
@@ -169,7 +178,7 @@ int install(char wants[])
         printf ("Installing to /usr/bin Please enter your password\n");
         char inst[512];
         strcpy(inst,"");
-        strcat(inst,"sudo ln -s ");
+        strcat(inst,"sudo ln -sf ");
         strcat(inst,dirname);
         strcat(inst,"/");
         strcat(inst, dl[0]);
