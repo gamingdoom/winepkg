@@ -20,7 +20,7 @@ gcc winepkg.c -o winepkg
 ```
 From here you can use winepkg with
 ```
-./winepkg
+./winepkg -Si mspaint
 ```
 If you want a winepkg command, copy the binary to /usr/bin
 ```
