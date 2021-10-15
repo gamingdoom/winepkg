@@ -1,6 +1,5 @@
 #!/bin/sh
 WD=$(pwd)
 cd "$(dirname "$(realpath "$0")")"
-wine exe/mspaint.exe 
-echo ${WD}
+WINEDEBUG=-all wine exe/mspaint.exe 
 cd "${WD}"
