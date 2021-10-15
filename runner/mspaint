@@ -1,1 +1,6 @@
-wine exe/mspaint.exe
+#!/bin/sh
+WD=$(pwd)
+cd "$(dirname "$(realpath "$0")")"
+wine exe/mspaint.exe 
+echo ${WD}
+cd "${WD}"
