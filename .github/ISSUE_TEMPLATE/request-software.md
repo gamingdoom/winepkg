@@ -10,7 +10,7 @@ assignees: ''
 # App Name:
 <the name of the app>
   
-# exe Download URL:
+# Download URL (exe):
 <a link to the download page of the .exe>
 
 # Patches/Dependencies (optional):
