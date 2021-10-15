@@ -175,7 +175,6 @@ int install(char wants[])
     char ans = 0;
     printf("Would you like to install this program as a command (/usr/bin) [Y/n]");
     while(ans != 'y' && ans != 'n' && ans != '\n') {ans = getchar();}
-    printf ("%c", ans);
     if (ans == 'n')
     {
         return 0;
