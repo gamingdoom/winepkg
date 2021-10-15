@@ -9,7 +9,9 @@ assignees: ''
 
 # App Name:
 <the name of the app>
+  
 # exe Download URL:
 <a link to the download page of the .exe>
+
 # Patches/Dependencies (optional):
 <names of required dlls for example>
