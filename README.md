@@ -6,12 +6,12 @@ A package manager for linux that installs windows apps through wine.
 winepkg -Si mspaint
 ```
 # Install
-Dependencies: ``wine`` ``winetricks``
+Dependencies: ``wine`` ``winetricks`` ``wget`` ``curl``
 
 Download the executable binary from releases and optionally move it to somewhere in path (ex. /usr/bin)
 
 # Building from source
-Dependencies: ``wine`` ``winetricks`` ``gcc``
+Dependencies: ``wine`` ``winetricks`` ``wget`` ``curl`` ``gcc``
 
 ```
 git clone https://github.com/gamingdoom/winepkg.git
