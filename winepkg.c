@@ -165,14 +165,15 @@ int install(char wants[])
     strcat(chmod, dl[0]);
     //printf("%s\n", chmod);
     system(chmod);
-    char ans[16];
+    char ans = 0;
     printf("Would you like to install this program as a command (/usr/bin) [Y/n]");
-    scanf("%c", ans);
-    if (strcmp(ans,"\n")!=0)
+    while(ans != 'y' && ans != 'n' && ans != '\n') {ans = getchar();}
+    printf ("%c", ans);
+    if (ans == 'n')
     {
         return 0;
     }
-    else 
+    else if (ans == '\n' || ans == 'y')
     {
         printf ("Installing to /usr/bin Please enter your password\n");
         char inst[512];
@@ -186,6 +187,12 @@ int install(char wants[])
         printf("%s\n",inst);
         system(inst);
     }
+    else 
+    {
+        printf ("Not Installing To /usr/bin. If you would like this, please re-run this command and type y\n");
+        return 2;
+    }
+    
 }
 
 
