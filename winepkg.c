@@ -4,6 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <sys/stat.h>
+int sync();
+int list();
+int install(char[]);
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +14,10 @@ int main(int argc, char *argv[])
     {
         printf ("Too Many Arguments, Try\nwinepkg --help\n");
         return 1;
+    }
+    if (argc == 2)
+    {
+        printf ("Not Enough Arguments, Try\nwinepkg --help\n");
     }
     //printf ("%s\n", argv[argc]);
     if (strcmp(argv[1],"--help")==0)
