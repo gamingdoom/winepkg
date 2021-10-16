@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ../exe/
+tar -xvf spacecadetpinball.tar.bz2
