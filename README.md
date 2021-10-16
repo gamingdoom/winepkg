@@ -8,7 +8,7 @@ winepkg -Si mspaint
 # Install
 Dependencies: ``wine`` ``winetricks`` ``wget`` ``curl``
 
-Download the executable binary from releases and optionally move it to somewhere in path (ex. /usr/bin)
+Download the executable binary artifact from github actions "build" and optionally move it to somewhere in path (ex. /usr/bin)
 
 # Building from source
 Dependencies: ``wine`` ``winetricks`` ``wget`` ``curl`` ``gcc``
