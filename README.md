@@ -1,4 +1,7 @@
 # Winepkg
+[![build](https://github.com/gamingdoom/winepkg/actions/workflows/build.yml/badge.svg)](https://github.com/gamingdoom/winepkg/actions/workflows/build.yml)
+
+
 A package manager for linux that installs windows apps through wine.
 
 # Usage
