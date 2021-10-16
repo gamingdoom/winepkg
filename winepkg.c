@@ -137,20 +137,7 @@ int install(char wants[])
     strcat(wgeti,dl[1]);
     //printf ("%s\n", wgeti);
     system(wgeti);
-    char execi[512];
-    strcpy(execi,"");
-    strcat(execi, "cd ");
-    strcat(execi, idirname);
-    strcat(execi, " && ");
-    strcat(execi, "chmod 775 ");
-    strcat(execi, idirname);
-    strcat(execi, "* && ");
-    strcat(execi, "exec ");
-    strcat(execi, idirname);
-    strcat(execi, "*");
-    //printf("%s\n", execi);
-    system(execi);
-    // Done with opt install script. Starting exe download
+    // Done download opt install script. Starting exe download
     char edirname[512];
     strcpy(edirname,dirname);
     strcat(edirname,"/exe/");
@@ -163,6 +150,19 @@ int install(char wants[])
     strcat(wgete,dl[2]);
     //printf ("%s\n", wgete);
     system(wgete);
+    char execi[512];
+    strcpy(execi,"");
+    strcat(execi, "cd ");
+    strcat(execi, idirname);
+    strcat(execi, " && ");
+    strcat(execi, "chmod 775 ");
+    strcat(execi, idirname);
+    strcat(execi, "* && ");
+    strcat(execi, "exec ");
+    strcat(execi, idirname);
+    strcat(execi, dl[0]);
+    //printf("%s\n", execi);
+    system(execi);
     // Downloading Runner Script
     char wgetr[512];
     strcpy(wgetr,"");
@@ -170,7 +170,7 @@ int install(char wants[])
     strcat(wgetr,dirname);
     strcat(wgetr," ");
     strcat(wgetr,dl[3]);
-    //printf ("%s\n", wgetr);
+    printf ("%s\n", wgetr);
     system(wgetr);
     char chmod[512];
     strcpy(chmod,"");
