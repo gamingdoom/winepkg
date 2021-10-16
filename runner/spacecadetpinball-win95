@@ -1,6 +1,6 @@
 #!/bin/sh
 WD=$(pwd)
 cd "$(dirname "$(realpath "$0")")"
-[ -f /lib/libpulse.so.0] && echo "" || echo "You may not have lib32-libpulse installed. Sound may not work"
+[ -f /lib/libpulse.so.0 ] && echo "" || echo "You may not have lib32-libpulse installed. Sound may not work"
 WINEDEBUG=-all wine exe/spacecadetpinball-win95/PINBALL.EXE 
 cd "${WD}"
