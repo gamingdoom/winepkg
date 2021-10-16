@@ -1,5 +1,5 @@
 #!/bin/sh
 WD=$(pwd)
 cd "$(dirname "$(realpath "$0")")"
-WINEDEBUG=-all wine exe/spacecadetpinball-win95/PINBALL.EXE 
+WINEDEBUG=-all wine exe/spacecadetpinball/pinball.exe
 cd "${WD}"
