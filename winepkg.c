@@ -134,6 +134,9 @@ int install(char wants[])
     system(wgeti);
     char execi[512];
     strcpy(execi,"");
+    strcat(execi, "cd ");
+    strcat(execi, idirname);
+    strcat(execi, " && ");
     strcat(execi, "chmod 775 ");
     strcat(execi, idirname);
     strcat(execi, "* && ");
