@@ -24,5 +24,5 @@ From here you can use winepkg with
 ```
 If you want a winepkg command, copy the binary to /usr/bin
 ```
-# cp winepkg /usr/bin/winepkg
+sudo cp winepkg /usr/bin/winepkg
 ```
