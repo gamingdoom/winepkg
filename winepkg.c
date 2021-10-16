@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
         printf ("Too Many Arguments, Try\nwinepkg --help\n");
         return 1;
     }
-    if (argc == 2)
+    if (argc > 2)
     {
         printf ("Not Enough Arguments, Try\nwinepkg --help\n");
     }
     //printf ("%s\n", argv[argc]);
     if (strcmp(argv[1],"--help")==0)
     {
-        printf ("Usage:\nwinepkg -Si <packagename>\nwinepkg -L\n-S    Sync (refresh package lists)\n-i    Install Package\n-L    List Packages\n-Sl   Sync and List Packages\n");
+        printf ("Usage:\nwinepkg -Si <packagename>\nwinepkg -l\n-S    Sync (refresh package lists)\n-i    Install Package\n-l    List Packages\n-Sl   Sync and List Packages\n");
     }
     else if (strcmp(argv[1],"-Sl")==0)
     {
@@ -58,6 +58,10 @@ int main(int argc, char *argv[])
     else if (strcmp(argv[1],"-i")==0)
     {
         install(argv[2]);
+    }
+    else if (strcmp(argv[1],"-l")==0)
+    {
+	list();printf("\n");
     }
     else if (strncmp(argv[1],"-", 1)==0)
     {
