@@ -61,7 +61,8 @@ int main(int argc, char *argv[])
     }
     else if (strcmp(argv[1],"-l")==0)
     {
-	list();printf("\n");
+        printf ("Here are the packages! Run winepkg -l | grep <packagename> to sort them\n");
+	    list();printf("\n");
     }
     else if (strncmp(argv[1],"-", 1)==0)
     {
