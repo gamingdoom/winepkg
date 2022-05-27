@@ -19,13 +19,13 @@ Dependencies: ``wine`` ``winetricks`` ``wget`` ``curl`` ``gcc``
 ```
 git clone https://github.com/gamingdoom/winepkg.git
 cd winepkg
-gcc winepkg.c -o winepkg
+make
 ```
 From here you can use winepkg with
 ```
-./winepkg -Si mspaint
+build/winepkg -Si mspaint
 ```
 If you want a winepkg command, copy the binary to /usr/bin
 ```
-sudo cp winepkg /usr/bin/winepkg
+sudo cp build/winepkg /usr/bin/winepkg
 ```
